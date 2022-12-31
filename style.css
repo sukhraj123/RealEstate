@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Oswald', sans-serif;
+}
+
+nav.sticky{
+    position: fixed;
+    top: 0;
+    
+    
+}
+
+nav{
+    display: flex;
+    padding: 1% 8%;
+    float: left;
+    background-attachment: fixed;
+    justify-content: space-between;
+    align-items: left;
+background-color: #000000;
+
+width: 100%;
+   
+   
+    
+}
+nav img{
+    width: 100px;
+    align-items:left;
+    
+    
+    border-radius: 10px;
+}
+
+.nav-links{
+    flex: 1;
+    
+    width: fit-content;
+    text-align: left;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    animation: fadeIn 5s;
+    
+    
+} 
+.nav-links ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    background-attachment: fixed;
+    
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fa7e09;
+    display: block;
+    margin: auto;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+nav .fa{
+    display: none;
+    
+}
+.header{
+    background-image: url(./images/Phone.gif);
+    width: 100%;
+   background-size: 98%;
+    height: 80vh;
+    background-attachment: fixed;
+  
+    margin-top: 7%;
+    margin-left: 2%;
+    margin-bottom: 10%;
+    background-repeat: no-repeat;
+   
+}
+@media(max-width: 700px){
+        
+    nav img{
+        width: 100px;
+    }
+    
+.nav-links ul li{
+    display: block;
+    color: #040404;
+    border: #00dcd1;
+}
+.nav-links ul li a{
+    display: block;
+    color: #040404;
+}
+.nav-links{
+    position: fixed;
+    background: #fff;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: right;
+    z-index: 1;
+    transition: 1s;
+    margin: auto;
+    
+}
+    
+
+nav .fa {
+    display: block;
+    color: #0071bc;
+    margin: 16px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 1s;
+
+    
+
+    }
+nav .fa-times{
+    display: block;
+    color: #0071bc;
+    margin: 16px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.nav-links ul{
+    padding: 15px;
+    color: #040404;
+}
+}
+
+.column {
+  float: left;
+  width: 100%;
+  flex-direction: row;
+  height: 5%;
+}
+.row{
+    width: 100%;
+
+   display: flex;
+   margin: auto;
+}
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+  flex-direction: row;
+  display: block;
+  
+  width: 100%;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  
+  
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+.rowdesc h1{
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 300px;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  cursor: pointer;
+}
+.rowdesc{
+    width: 100%;
+    
+   padding-top: 10vh;
+   padding-bottom: 10vh;
+    background-color: #f1f1f1;
+    
+}
+#expandedimg{
+    width: 100%;
+    top: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .columnn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    
+  }
+  .columnn a{
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .rowdesc {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .rowdesc:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .card:hover{
+    opacity: 0.5;
+    
+  }
+  .card img{
+    width: 100%;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .columnn {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .header{
+      background-size: cover;
+      background-position: center;
+      margin-left: 0;
+    }
+  }
+  footer{
+    
+    
+    left: 0;
+    right: 0;
+    background: #111;
+    
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3{
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+  
+}
+
+.socials li{
+  margin: 0 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.socials a{
+  text-decoration: none;
+  color: #fff;
+ 
+  padding: 4px;
+  
+
+}
+
+.socials a i{
+  font-size: 1.1rem;
+  width: 30px;
+  transition: color .4s ease;
+}
+.about{
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+}
+.about h1{
+  text-align: center;
+  padding-bottom: 100px;
+  font-size: 32px;
+}
+.rowone p{
+  display: flex;
+ font-size: 22px;
+  
+  padding-bottom: 100px;
+  margin-left: 30%;
+  width: 40%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.socials a:hover i{
+  color: #fa7e09;
+}
+.footer-bottom{
+  background: #000;
+  width: 100vw;
+  padding: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.footer-bottom p{
+  float: left;
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom p a{
+ color:#fa7e09;
+ font-size: 16px;
+ text-decoration: none;
+}
+.footer-bottom span{
+   text-transform: uppercase;
+   opacity: .4;
+   font-weight: 200;
+}
+.footer-menu{
+  float: right;
+}
+
+.footer-menu ul{
+  display: block;
+}
+
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+
+.footer-menu ul li a{
+  color: #cfd2d6;
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover{
+  color: #fa7e09;
+}
+@media (max-width:500px) {
+  .footer-menu ul{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  }
